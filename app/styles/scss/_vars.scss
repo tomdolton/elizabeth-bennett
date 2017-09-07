@@ -1,0 +1,67 @@
+/* ==========================================================================
+    Variables
+========================================================================== */
+
+
+//Colors
+//==========================================================================
+
+$fountain-blue   : #52bab3;
+$emerald         : #5ece7f;
+
+//Color usage
+$color-primary: $fountain-blue;
+$color-secondary: $emerald;
+
+$default-color: grey;
+$font-color: darken($default-color, 60%);
+$light-color: lighten($default-color, 20%);
+
+
+
+
+//Fonts
+//==========================================================================
+
+//Font stacks
+$font-url:
+$font-family--primary:
+$font-family--secondary:
+
+// Font-weights
+$font-weight--thin: 100;
+$font-weight--light: 300;
+$font-weight--medium: 400;
+$font-weight--bold: 700;
+$font-weight--ultra-bold: 900;
+
+// Text
+$base-font-size: 16px;
+$l-font-size: 24px;
+$xl-font-size: 28px;
+/* Then set :root size in _base for scaling.
+ all other font sizes to be in rem
+ any other sizes to be in em
+ For vertical rhythm related to multiples of $-font-size, eg:
+    h1 {font-size: $font-size * 2;} (2rem)
+*/
+
+$line-height: $base-font-size * 1.5;
+
+
+
+
+
+// Media Query Breakpoints
+//==========================================================================
+
+$breakpoints: (
+  "xxs":  400px;  //phone
+  "xs":   480px;  //phone wide
+  "s":    560px;  //phablet
+  "m":    640px;  //tablet small
+  "l":   768px;  //tablet
+  "xl":  1024px;  //tablet wide
+  "xxl": 1248px;  //desktop
+  "xxxl": 1440px;  //desktop wide
+);

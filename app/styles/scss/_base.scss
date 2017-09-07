@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+/*Set document root font size
+//==========================================================================
+ This allows rem and subesquent em sizing to be scaled with media queries.
+ Rem units are to be used for font-sizes
+ Em units are to be used for each element/module's other subesquent sizing
+ parameters based  on its font size.
+
+*/
+\:root {
+    font-size: $base-font-size;
+
+    @media(min-width: l) {
+        font-size: $l-font-size;
+    }
+
+    @media(min-width: xl) {
+        font-size: $xl-font-size;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+}
+
+
+a {
+
+    &:hover {
+
+    }
+}

@@ -1,0 +1,23 @@
+/* ==========================================================================
+    M-Nav
+========================================================================== */
+
+.m-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    margin-bottom: 20px;
+
+    background-color: inherit;
+
+    &__item {
+        border: solid 1px black;;
+
+        &.is-selected {
+            color: blue;
+        }
+    }
+    &__search {
+        @extend .nav__item;
+    }
+}
