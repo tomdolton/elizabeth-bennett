@@ -146,3 +146,12 @@
   overflow: hidden;
   position: absolute;
 }
+
+
+// Hide text to show a background image
+
+%hidetext {
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}

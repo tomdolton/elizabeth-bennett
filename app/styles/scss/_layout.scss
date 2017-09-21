@@ -6,50 +6,80 @@
 /* Main layout sections
   ========================================================================== */
 
-#header {
+// Home
+.wrap {
+    display: flex;
+    min-height: 100vh;
+    padding: 0 10px;
 
+
+    @media (max-width: 775px) {
+        display: block;
+    }
 }
 
-#nav {
+.home-sections {
+    flex: 1;
 
-}
+    section {
+        padding: 50px 0;
+    }
 
-#main {
 
-}
+    // Flex Classes
+    .flex {
+        display: flex;
+        flex-direction: row;
+    }
 
-#footer {
+    .flex--center {
+        justify-content: center;
+    }
 
-}
+    .flex--space-around {
+        justify-content: space-around;
+    }
 
-#side-bar {
-
+    .order-first {
+        order: -1;
+    }
 }
 
 
 /* Grid
   ========================================================================== */
 
-.wrapper {
 
+// Columns
+.col-1 {
+    max-width: 300px;
+    margin: 0 10px;
+    background: pink;
 }
 
-.cols {
+.col-2 {
+    max-width: 620px;
+    margin: 0 10px;
+    background: honeydew;
+}
 
+.col-50 {
+    width: 50%;
+    background: yellow;
 }
 
 
-/* Modular layout classes
-   ========================================================================== */
+// Mobile screens column collapse
+@media (max-width: 775px) {
+    .home-sections .flex {
+        display: block;
+    }
 
-.l-left {
-    float: left;
-}
+    .col-1 {
+        max-width: 100%;
+    }
 
-.l-right {
-    float: right;
-}
-
-.l-align-center {
-    text-align: center;
+    .col-50 {
+        width: auto;
+    }
 }

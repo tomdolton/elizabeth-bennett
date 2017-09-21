@@ -6,14 +6,39 @@
 //Colors
 //==========================================================================
 
-$fountain-blue   : #52bab3;
-$emerald         : #5ece7f;
+// Some Useful color Vars via http://clrs.cc/
+
+// Cool
+$aqua:  #7FDBFF;
+$blue:  #0074D9;
+$navy:  #001F3F;
+$teal:  #39CCCC;
+$green: #2ECC40;
+$olive: #3D9970;
+$lime:  #01FF70;
+
+
+// Warm
+$yellow:  #FFDC00;
+$orange:  #FF851B;
+$red:     #FF4136;
+$fuchsia: #F012BE;
+$purple:  #B10DC9;
+$maroon:  #85144B;
+
+
+// Gray Scale
+$white:  #fff;
+$silver: #ddd;
+$gray:   #aaa;
+$black:  #111;
+
 
 //Color usage
-$color-primary: $fountain-blue;
-$color-secondary: $emerald;
+$color-primary: $white;
+$color-secondary: $black;
 
-$default-color: grey;
+$default-color: $gray;
 $font-color: darken($default-color, 60%);
 $light-color: lighten($default-color, 20%);
 
@@ -23,10 +48,13 @@ $light-color: lighten($default-color, 20%);
 //Fonts
 //==========================================================================
 
+// http://fonts.googleapis.com/css?family=Fira+Sans
+
+
 //Font stacks
-$font-url:
-$font-family--primary:
-$font-family--secondary:
+// $font-url:
+// $font-family--primary:
+// $font-family--secondary:
 
 // Font-weights
 $font-weight--thin: 100;
@@ -56,12 +84,11 @@ $line-height: $base-font-size * 1.5;
 //==========================================================================
 
 $breakpoints: (
-  "xxs":  400px;  //phone
-  "xs":   480px;  //phone wide
-  "s":    560px;  //phablet
-  "m":    640px;  //tablet small
-  "l":   768px;  //tablet
-  "xl":  1024px;  //tablet wide
-  "xxl": 1248px;  //desktop
-  "xxxl": 1440px;  //desktop wide
-);
+  "xxs":  400px,  //phone
+  "xs":   480px,  //phone wide
+  "s":    560px,  //phablet
+  "m":    640px,  //tablet small
+  "l":   768px,  //tablet
+  "xl":  1024px,  //tablet wide
+  "xxl": 1248px,  //desktop
+  "xxxl": 1440px);  //desktop wide

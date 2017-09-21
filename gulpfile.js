@@ -81,7 +81,7 @@ gulp.task('clean', function () {
 // Watch files for changes & reload
 gulp.task('serve', ['scripts', 'styles'], function () {
     browserSync.init({
-        notify: true,
+        notify: false,
         // Allow scroll syncing across breakpoints
         scrollElementMapping: ['main', '.mdl-layout'],
         server: ['.tmp', 'app'],
@@ -98,7 +98,7 @@ gulp.task('serve', ['scripts', 'styles'], function () {
 // Build and serve the output from the dist build
 gulp.task('serve:dist', ['default'], function () {
     browserSync.init({
-        notify: true,
+        notify: false,
         // Allow scroll syncing across breakpoints
         scrollElementMapping: ['main', '.mdl-layout'],
         server: ['dist'],

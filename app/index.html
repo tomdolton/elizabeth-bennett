@@ -2,10 +2,65 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Elizabeth Bennett Photographer</title>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400|Josefin+Slab:300,400|Megrim|Poiret+One|Spectral:200,300,400" rel="stylesheet">
+        <link rel="stylesheet" href="/styles/main.css">
     </head>
     <body>
-        <h1>Helloooooo</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="wrap">
+            <div class="mobile-nav">
+                <ul>
+                    <li><a href="#recent">Recent</a></li>
+                    <li><a href="#seascape">Seascape</a></li>
+                    <li><a href="#landscape">Landscape</a></li>
+                    <li><a href="#india">India</a></li>
+                    <li><a href="#uk">U.K.</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div> <!--mobile nav-->
+            <header>
+                <div class="header-position">
+                    <h1 class="logo">Elizabeth Bennett</h1>
+
+                    <nav class="site-nav">
+                        <ul>
+                            <li><a href="#recent">Recent</a></li>
+                            <li><a href="#seascape">Seascape</a></li>
+                            <li><a href="#landscape">Landscape</a></li>
+                            <li><a href="#india">India</a></li>
+                            <li><a href="#uk">U.K.</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <a class="email-link" href="mailto:libbybennett@hotmail.com">+email me</a>
+                    <div class="mobile-nav-toggle">
+                        <span></span>
+                    </div><!--mobile-nav-toggle-->
+                </div> <!--header-position-->
+            </header>
+
+            <div class="home-sections">
+
+                <section class="gallery">
+                    <div class="carousel-outer">
+                        <div class="prev-link"></div>
+                        <ul class="carousel-inner">
+                            <li class="inner__item item--is-shown"><img src="/images/dunes1.jpg" alt="Holme-next-the-sea dunes"></li>
+                            <li class="inner__item"><img src="/images/beach3.jpg" alt="Holkham beach west entrance at sunset"></li>
+                            <li class="inner__item"><img src="/images/beach1.jpg" alt="Holkham beach with distant figure at sunset"></li>
+                            <li class="inner__item"><img src="/images/beach2.jpg" alt="Holkham beach with close figure at sunset"></li>
+                        </ul>
+                        <div class="next-link"></div>
+                    </div> <!-- carousel-outer-->
+                </section> <!-- gallery -->
+
+            </div>
+        </div> <!--.wrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="/scripts/main.js"></script>
     </body>
 </html>
