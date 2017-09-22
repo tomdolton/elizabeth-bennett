@@ -1,6 +1,6 @@
 (function ($) {
 
-    // Mobile nav dropdown button function
+// Mobile nav dropdown button function ===================================//
     var $mobileNavToggleBtn = $('.mobile-nav-toggle');
 
     function onNavClick(e) {
@@ -12,14 +12,14 @@
     }
 
 
-    // Carousel slider function
+// Carousel slider function ============================================//
 
     // Next and Previous buttons
     var $nextLink = $('.next-link'),
         $prevLink = $('.prev-link');
 
     // Next image function
-    function onNextClick() {
+    var onNextClick = function() {
         var $activeImg = $('.item--is-shown'),
             $nextImg = $activeImg.next();
 
@@ -33,7 +33,18 @@
         // next sibling li toggle class .image-hidden with .item--is-shown
         $nextImg.toggleClass('item--is-shown');
 
-    }
+        // Set the height of the next and previous buttons:
+        this.setButtonsHeight = function () {
+            // get the height of the current active image
+            var currentHeight = $activeImg.height();
+            // change the height attribute of both $nextLink and $prevLink
+            $nextLink.height(currentHeight);
+            $prevLink.height(currentHeight);
+        };
+        // call set height when next item function is called
+        this.setButtonsHeight();
+
+    };
 
     // Previous image function
     function onPrevClick() {
@@ -49,6 +60,18 @@
         $activeImg.toggleClass('item--is-shown');
         // previous sibling li toggle class .image-hidden with .item--is-shown
         $prevImg.toggleClass('item--is-shown');
+
+        // Set the height of the next and previous buttons:
+        // (nessecary if prev image is different dimension to current)
+        this.setButtonsHeight = function () {
+            // get the height of the current active image
+            var currentHeight = $activeImg.height();
+            // change the height attribute of both $nextLink and $prevLink
+            $nextLink.height(currentHeight);
+            $prevLink.height(currentHeight);
+        };
+        // call set height when next item function is called
+        this.setButtonsHeight();
 
     }
 
@@ -75,10 +98,11 @@
                 onNextClick();
             }
         }, 8000);
-
-
-
     }
+
+
+
+
 
 
     // Document ready activates functions
@@ -87,7 +111,12 @@
         $nextLink.on('click', onNextClick);
         $prevLink.on('click', onPrevClick);
         autoCycle();
+        // set buttons height for the first time
+        (new onNextClick()).setButtonsHeight();
+        // set buttons height on window resize event
+        window.onresize = (new onNextClick()).setButtonsHeight;
     });
+
 
 
 
