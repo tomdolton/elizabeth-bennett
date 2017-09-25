@@ -8,23 +8,20 @@
 
 // Home
 .wrap {
-    display: flex;
+    display: block;
     height: 100vh;
-    padding: 0 10px;
+    padding: 0 20px;
 
 
-    @media (max-width: 775px) {
-        display: block;
+    @media (min-width: 775px) {
+        display: flex;
+        padding: 0;
     }
 }
 
-.home-sections {
+section {
     flex: 1;
-
-    section {
-        padding: 50px 0;
-    }
-
+    padding: 50px 0;
 
     // Flex Classes
     .flex {

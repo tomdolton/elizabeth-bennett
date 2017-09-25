@@ -1,4 +1,4 @@
-(function ($) {
+(function ($) { // Begin jQuery
 
 // Mobile nav dropdown button function ===================================//
     var $mobileNavToggleBtn = $('.mobile-nav-toggle');
@@ -7,9 +7,20 @@
         var $this = $(this),
             $selectors = $('.mobile-nav');
 
-        $(this).toggleClass('is-open');
+        $this.toggleClass('is-open');
         $selectors.toggleClass('is-open');
     }
+
+    var $innerNavToggleBtn = $('.dropbtn');
+
+    function onInnerNavClick() {
+        var $this = $(this),
+        $dropContent = $('.dropdown__content');
+
+        $this.toggleClass('is-active');
+        $dropContent.toggleClass('is-active');
+    }
+
 
 
 // Carousel slider function ============================================//
@@ -33,18 +44,32 @@
         // next sibling li toggle class .image-hidden with .item--is-shown
         $nextImg.toggleClass('item--is-shown');
 
-        // Set the height of the next and previous buttons:
-        this.setButtonsHeight = function () {
-            // get the height of the current active image
-            var currentHeight = $activeImg.height();
-            // change the height attribute of both $nextLink and $prevLink
-            $nextLink.height(currentHeight);
-            $prevLink.height(currentHeight);
-        };
-        // call set height when next item function is called
-        this.setButtonsHeight();
-
+        // // call set height when next item function is called
+        setButtonsHeight();
     };
+
+    function setCarouselHeight() {
+        var $activeImg = $('.item--is-shown'),
+            currentHeight = $activeImg.height();
+            // change the height attribute of carousel-outer
+            $('.carousel-outer').height(currentHeight);
+    }
+
+// // Set the height of the next and previous buttons:
+    function setButtonsHeight() {
+        // get the height of the current active image
+        var $activeImg = $('.item--is-shown'),
+            currentHeight = $activeImg.height();
+        // change the height attribute of both $nextLink and $prevLink
+        $nextLink.height(currentHeight);
+        $prevLink.height(currentHeight);
+
+    }
+
+
+    // all images files to be same height in folder.
+
+    // set .carousel-outer height with height of responsive image similar to above
 
     // Previous image function
     function onPrevClick() {
@@ -61,17 +86,9 @@
         // previous sibling li toggle class .image-hidden with .item--is-shown
         $prevImg.toggleClass('item--is-shown');
 
-        // Set the height of the next and previous buttons:
-        // (nessecary if prev image is different dimension to current)
-        this.setButtonsHeight = function () {
-            // get the height of the current active image
-            var currentHeight = $activeImg.height();
-            // change the height attribute of both $nextLink and $prevLink
-            $nextLink.height(currentHeight);
-            $prevLink.height(currentHeight);
-        };
-        // call set height when next item function is called
-        this.setButtonsHeight();
+
+        // // call buttons set height when previous item function is called
+        setButtonsHeight();
 
     }
 
@@ -97,31 +114,37 @@
             if (!isPaused) {
                 onNextClick();
             }
-        }, 8000);
+        }, 10000);
     }
 
 
 
-
+// var setButtonsHeight
 
 
     // Document ready activates functions
     $(document).ready(function () {
+        // Nav drop down buttons
         $mobileNavToggleBtn.on('click', onNavClick);
+        $innerNavToggleBtn.on('click', onInnerNavClick);
+        // Carousel
         $nextLink.on('click', onNextClick);
         $prevLink.on('click', onPrevClick);
         autoCycle();
-        // set buttons height for the first time
-        (new onNextClick()).setButtonsHeight();
+        // set buttons height for the first time ??
+
         // set buttons height on window resize event
-        window.onresize = (new onNextClick()).setButtonsHeight;
-    });
+        window.onresize = setButtonsHeight;
+        // set carousel-outer height
+        setCarouselHeight();
+        window.onresize = setCarouselHeight;
+    }); // end DOM ready
 
 
 
 
 
-})(jQuery);
+})(jQuery); // end jQuery
 
 
 

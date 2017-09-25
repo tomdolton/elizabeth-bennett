@@ -74,9 +74,8 @@ gulp.task('html', function () {
 
 // Clean output directory
 gulp.task('clean', function () {
-    del(['.tmp', 'dist/*', '!dist/.git'], {dot: true});
+    del(['.tmp', 'dist/*', '!dist/.git', '!dist/scripts/**'], {dot: true});
 });
-
 
 // Watch files for changes & reload
 gulp.task('serve', ['scripts', 'styles'], function () {
