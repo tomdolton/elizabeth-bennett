@@ -1,0 +1,16 @@
+//sass
+// ======================================
+//  Partial Imports
+// ======================================
+
+// Utilities
+@import 'vars', 'utils';
+
+// Base Styles
+@import 'normalize', 'base';
+
+// Layout Styles
+@import 'layout';
+
+// Module Styles
+@import 'modules/gallery', 'modules/mfnav', 'modules/about';

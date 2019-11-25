@@ -1,0 +1,50 @@
+/* ==========================================================================
+    Layout
+========================================================================== */
+
+/* Main layout sections
+  ========================================================================== */
+
+.wrap {
+  height: 100%;
+  padding: 0 10px;
+
+  @media (min-width: map-get($breakpoint, 'l')) {
+    display: flex;
+    padding: 0;
+    height: 100vh;
+  }
+}
+
+section {
+  flex: 1;
+  margin-top: 40px;
+
+  @media (min-width: map-get($breakpoint, 'l')) {
+    margin-top: 0;
+  }
+}
+
+.carousel-outer {
+  height: 100%;
+}
+
+// ===============Footer=================
+
+footer {
+  text-align: center;
+  height: 50px;
+  margin-top: 5em;
+  p {
+    font-family: 'Josephin Sans', sans-serif;
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: map-get($breakpoint, 'l')) {
+
+  .footer--large {
+    display: none;
+  }
+}
