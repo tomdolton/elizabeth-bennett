@@ -163,26 +163,26 @@
 
 
 
-    // Document ready activates functions
-    $(document).ready(function () {
-        // Nav drop down buttons
-        $mobileNavToggleBtn.on('click', onNavClick);
-        // $innerNavToggleBtn.on('click', onInnerNavClick);
-        // Carousel (active on larger screens)
-        if ($(window).width() > 768) {
-            $nextLink.on('click', onNextClick);
-            $prevLink.on('click', onPrevClick);
-            autoCycle();
-            $(document).on('keydown', keyboardLeftRight);
-            // set buttons height for the first time 
 
-            // set buttons height on window resize event
-            window.onresize = setButtonsHeight;
-            // set carousel-outer height
-            setCarouselHeight();
-            window.onresize = setCarouselHeight;
-        }
-    }); // end DOM ready
+
+    // Nav drop down buttons
+    $mobileNavToggleBtn.on('click', onNavClick);
+    // $innerNavToggleBtn.on('click', onInnerNavClick);
+    // Carousel (active on larger screens)
+    if ($(window).width() > 768) {
+        $nextLink.on('click', onNextClick);
+        $prevLink.on('click', onPrevClick);
+        autoCycle();
+        $(document).on('keydown', keyboardLeftRight);
+        // set buttons height for the first time 
+
+        // set buttons height on window resize event
+        window.onresize = setButtonsHeight;
+        // set carousel-outer height
+        setCarouselHeight();
+        window.onresize = setCarouselHeight;
+    }
+
 
 
 

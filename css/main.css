@@ -575,7 +575,7 @@ footer {
 
 footer p {
   font-family: 'Josephin Sans', sans-serif;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 @media (max-width: 768px) {
@@ -965,7 +965,7 @@ header .site-nav ul li:last-child {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin-top: 4em;
+    margin-top: 7em;
   }
 }
 
@@ -993,6 +993,13 @@ header .site-nav ul li:last-child {
 
 .contact {
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    margin-top: 3em;
+    margin-bottom: 200px;
+  }
 }
 
 .button--contact {
