@@ -10,7 +10,7 @@
         $this.toggleClass('is-open');
         $selectors.toggleClass('is-open');
 
-        /* Anything that gets to the document
+        /* Any click event that gets to the document
        will hide the dropdown */
         $(document).click(function () {
             $selectors.removeClass('is-open');
@@ -141,7 +141,7 @@
 
 
     // Set .carousel-outer height with height of responsive image similar to above
-    // all images files to be same height in folder.
+    // All images files to be same height in folder.
 
     function setCarouselHeight() {
         var $activeImg = $('.item--is-shown'),
@@ -176,11 +176,12 @@
         $(document).on('keydown', keyboardLeftRight);
         // set buttons height for the first time 
 
-        // set buttons height on window resize event
+        // set buttons & carousel height on window resize event
         window.onresize = setButtonsHeight;
-        // set carousel-outer height
-        setCarouselHeight();
         window.onresize = setCarouselHeight;
+        // set buttons & carousel height on document load
+        document.onload = setButtonsHeight;
+        document.onload = setCarouselHeight;
     }
 
 
